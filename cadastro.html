@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastro de Necessidades</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+ </head>
+ <body>
+    <header>
+        <nav>
+            <!--criação d botões para a movimentação de paginas -->
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.href='cadastro.html'">Cadastro</button>
+            <button onclick="window.location.href='visualizacao.html'">Visualização</button>
+        </nav>
+    </header>
+    <main>
+        <form id="formCadastro">
+            <!--usando o codigo label para escrever na pagina-->
+            <!--usando o codigo input para pegar o que o usuario escreveu-->
+            <label>Nome da Isntituição: <input type="text" id="isntituicao" required></label>
+
+            <label>Tipo de Ajuda: 
+                <select id="tipoAjuda" required><!--Criando um select para seleção de ajuda-->
+                    <option value="">Selecione</option>
+                    <option>Educação</option>
+                    <option>Saúde</option>
+                    <option>Meio Ambiente</option>
+                    <option>Doação de Alimentos</option>
+                    <option>Doação de Roupas</option>
+                    <option>Outros</option>
+                </select>
+            </label>
+            
+            <label>Titulo da Necessidade: <input type="text" id="tituli" required></label>
+            <label>Descrição Detalhada:
+                <textarea id="descricao" rows="10" cols="80" required></textarea><!--criando uma area de texto para ecrever a descrição da ajuda-->
+            </label>
+
+            <label>CEP: <input type="text" id="cep" required></label>
+
+            <label></label>
+
+        </form>
+    </main>
+    
+ </body>
+ </html>
