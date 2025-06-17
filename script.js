@@ -28,3 +28,25 @@ document.getElementById('formCadastro').addEventListener('submit', (e)=>{
 
 }) // adicionando um document get element para pegar o id formcadastro
 // e usando um add event para adicionar uma evento quanto um botão com tipo SUBMIT for clicado
+
+
+document.getElementById('cep').addEventListener('blur', async()=>{
+ const cep = document.getElementById('cep').value.replace(/\D/g, ''); // pegando o valor da variavel com o id cep e removendo todos os caracteres que não são digitos   
+
+ if(cep.length === 8){ // verificando se o campo cep tem 8 digitos
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`); // esta buncando os dados do cep na api viacep
+    const data = await response.json(); // esta colacando os dados do cep na variavel data
+    
+    // verificando se a varialvel data não deu erro
+    if(!data.erro){
+        // passando todos os dados da variavel data para os elementos 
+        document.getElementById('rua').value = data.logradouro;
+        document.getElementById('bairro').value = data.bairro;
+        document.getElementById('cidade').value = data.localidade;
+        document.getElementById('estado').value = data.uf;
+    } else{
+        alert('CEP não encontrado!!!');
+    }
+
+ }
+});
