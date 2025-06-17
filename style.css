@@ -36,3 +36,12 @@ form input, form select, form textarea{
     padding: 8px;
     margin-top: 5px;
 }
+button{
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 10%;
+    background-color: #0a9396;
+    color: white;
+    border: none;
+}
