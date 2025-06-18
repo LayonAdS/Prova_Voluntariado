@@ -1,3 +1,22 @@
+ document.addEventListener('DOMContentLoaded', () => {
+        renderizarLista();
+
+        document.getElementById('busca').addEventListener('input', (e) => {
+           const filtro = e.target.value;
+           const tipo = document.getElementById('filtroTipo').value;
+           renderizarLista(filtro, tipo); 
+        });
+        document.getElementById('filtroTipo').addEventListener('change', () => {
+            const filtro = document.getElementById('busca').value;
+            const tipo = document.getElementById('filtroTipo').value;
+            renderizarLista(filtro, tipo);
+        });
+
+
+    });
+
+
+
 document.getElementById('formCadastro').addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -25,7 +44,7 @@ document.getElementById('formCadastro').addEventListener('submit', (e) => {
 
     alert('Necessidade cadastrada com sucesso!!!'); // codigo alert para verificar se tudo esta correto
     document.getElementById('formCadastro').reset(); // .reset tem como objetivo limpar todos os campos do cadastro
-
+    
 }) // adicionando um document get element para pegar o id formcadastro
 // e usando um add event para adicionar uma evento quanto um botão com tipo SUBMIT for clicado
 
@@ -79,7 +98,5 @@ function renderizarLista(filtro = '', tipo = ''){
       container.appendChild(card);
         //adiciona o card criado 
     });
-
-    
 
 }
