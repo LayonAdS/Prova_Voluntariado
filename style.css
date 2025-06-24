@@ -28,9 +28,11 @@ main {
     margin-top: 1rem;
     padding: 1rem;
 }
-
-form,
-.home {
+.home{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;  
+}
+form{
     max-width: 600px;
     margin: auto;
 }
@@ -57,3 +59,11 @@ button {
     color: white;
     border: none;
 }
+.card{
+    background-color: white;
+    border: 5px solid rgb(221, 190, 190);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+
