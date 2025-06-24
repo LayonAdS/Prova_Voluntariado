@@ -3,13 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: sans-serif;
-    padding: 1rem;
-    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
-
+/* Main e formulário */
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.15);
+}
 header,
 footer {
     background-color: #005f73;
@@ -24,10 +34,7 @@ nav a {
     text-decoration: none;
 }
 
-main {
-    margin-top: 1rem;
-    padding: 1rem;
-}
+
 form{
     max-width: 600px;
     margin: auto;
@@ -101,5 +108,13 @@ button {
 .home ul li {
     margin-bottom: 10px;
 }
+
+
+
+
+
+
+
+
 
 
